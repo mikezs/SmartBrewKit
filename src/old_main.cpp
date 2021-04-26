@@ -320,7 +320,7 @@ void button_loop()
     btnDwn.loop();
 }
 
-void setup() {
+void oldsetup() {
   //options=&myOptions;//can customize options
   Serial.begin(115200); // Set Serial baudrate at 115200
   while(!Serial);
@@ -371,7 +371,7 @@ unsigned long currentMillis = 0;
 unsigned long previousSensorMillis = 0;
 int sensorInterval = 1000;
 
-void loop() {
+void oldloop() {
   currentMillis = millis();
 
   button_loop();
