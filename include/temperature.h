@@ -3,8 +3,7 @@
 
 class Temperature {
 public:
-    Temperature() {}
-    ~Temperature() {}
+    virtual ~Temperature() {}
     virtual float getUpdate() = 0;
     float currentTemperature;
 };

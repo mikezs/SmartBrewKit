@@ -1,13 +1,9 @@
-#include <Arduino.h>
-#include <TFT_eSPI.h>
-#include <Button2.h>
-
 #include "smartbrewkit.h"
 
 SmartBrewKit *sbk;
 
 void setup() {
-    sbk = new TDisplaySmartBrewKit();
+    sbk = new TDisplaySmartBrewKit(32);
 }
 
 void loop() {

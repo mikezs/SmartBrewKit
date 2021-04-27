@@ -1,8 +1,10 @@
+#include "connection.h"
+#include "display.h"
+#include "relay.h"
 #include "temperature.h"
 
 class SmartBrewKit {
 public:
-    SmartBrewKit() {}
     virtual ~SmartBrewKit() {}
     virtual void loop() = 0;
     Temperature *temp;
@@ -14,8 +16,8 @@ class TDisplaySmartBrewKit : public SmartBrewKit
 private:
 
 public:
-    TDisplaySmartBrewKit() {
-        this->temp = new SBKTemperature(32);
+    TDisplaySmartBrewKit(uint8_t pin) {
+        this->temp = new SBKTemperature(pin);
     }
     ~TDisplaySmartBrewKit() {}
     void loop();
